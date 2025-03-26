@@ -25,7 +25,11 @@ jobs:
         distribution: 'zulu'
         java-version: 8
     - name: Baixar e Configurar Mule Runtime
-      run: mvn test
+      run: |
+        mvn clean
+        mvn dependency:purge-local-repository
+        mvn clean install -U
+        mvn test
   build:
     needs: test
     runs-on: ubuntu-latest
