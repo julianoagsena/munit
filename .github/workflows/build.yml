@@ -24,6 +24,14 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: 8
+    - name: Baixar e Configurar Mule Runtime
+      run: |
+        export MULE_VERSION=4.4.0
+        wget -q https://repository.mulesoft.org/nexus/content/repositories/releases/org/mule/distributions/mule-standalone/$MULE_VERSION/mule-standalone-$MULE_VERSION.tar.gz
+        tar -xzf mule-standalone-$MULE_VERSION.tar.gz
+        mv mule-standalone-$MULE_VERSION /opt/mule
+        echo "MULE_HOME=/opt/mule" >> $GITHUB_ENV
+        echo "PATH=$MULE_HOME/bin:$PATH" >> $GITHUB_ENV
     - name: Test with Maven
       run: mvn test
       
