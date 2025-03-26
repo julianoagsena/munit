@@ -32,7 +32,7 @@
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
+				<groupId>com.mulesoft.munit.tools</groupId>
 				<artifactId>munit-maven-plugin</artifactId>
 				<version>${munit.version}</version>
 				<executions>
@@ -75,14 +75,12 @@
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-runner</artifactId>
 			<version>3.4.0</version>
-			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-tools</artifactId>
 			<version>3.4.0</version>
-			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
