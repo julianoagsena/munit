@@ -18,12 +18,6 @@
                 <url> https://repository.mulesoft.org/nexus/content/repositories/public </url>
             </repository>
         </repositories>
-        <pluginRepositories>
-            <pluginRepository>
-                <id>mule-public</id>
-                <url> https://repository.mulesoft.org/nexus/content/repositories/public </url>
-            </pluginRepository>
-        </pluginRepositories>
      </profile>
   </profiles>
 </settings>
