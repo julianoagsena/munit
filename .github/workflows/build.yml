@@ -32,7 +32,8 @@ jobs:
         mv mule-standalone-$MULE_VERSION /opt/mule
         echo "MULE_HOME=/opt/mule" >> $GITHUB_ENV
         echo "PATH=$MULE_HOME/bin:$PATH" >> $GITHUB_ENV
-
+        echo "executar mvn test"
+        mvn test
       
   build:
     needs: test
