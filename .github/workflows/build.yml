@@ -25,7 +25,7 @@ jobs:
         distribution: 'zulu'
         java-version: 8
     - name: Baixar e Configurar Mule Runtime
-      run: mvn clean test
+      run: mvn clean test -Dmule.vault.key=1234
   build:
     needs: test
     runs-on: ubuntu-latest
